@@ -4,7 +4,7 @@ import streamlit as st
 from streamlit_chat import message
 from agent import Agent
 
-st.set_page_config(page_title="ChatPDF")
+st.set_page_config(page_title="pdfAIchatbot")
 
 
 def display_messages():
@@ -52,7 +52,7 @@ def main():
         else:
             st.session_state["agent"] = None
 
-    st.header("ChatPDF")
+    st.header("pdfAIchatbot")
 
     if st.text_input("OpenAI API Key", value=st.session_state["OPENAI_API_KEY"], key="input_OPENAI_API_KEY", type="password"):
         if (
@@ -83,7 +83,7 @@ def main():
     st.text_input("Message", key="user_input", disabled=not is_openai_api_key_set(), on_change=process_input)
 
     st.divider()
-    st.markdown("Source code: [Github](https://github.com/viniciusarruda/chatpdf)")
+    st.markdown("Source code: [Github](https://github.com/Rkbro0/pdfAIchatbot)")
 
 
 if __name__ == "__main__":
